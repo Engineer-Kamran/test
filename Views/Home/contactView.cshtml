@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>contactView</title>
+    <script src="~/Scripts/Jquery1.9.1.js"></script>
+    <script>
+        $(function () {
+            //$('#contacts').append('<li>'+'first'+'</li>');
+            $.getJSON("/api/contact", function (data) {
+                $(data).each(function (i, item) {
+                    $('#contacts').append('<li>' + item.Name + '</li>');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+
+      HY! Me Here for<br/> <h1>Contact List</h1>
+      <ul id="contacts"></ul>
+    </div>
+</body>
+</html>

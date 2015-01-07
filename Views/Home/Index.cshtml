@@ -1,0 +1,25 @@
+﻿<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">ASP.NET Web API</a></p>
+        </div>
+    </div>
+    <script src="~/Scripts/Jquery1.9.1.js"></script>
+</header>
+
+<script type="text/javascript">
+    $(function () {
+               a();
+   /*     $.ge("/api/contact", function (data) {
+            $(data).each(function (i, item) {
+                $('#contacts').append('<li>' + item.Name + '</li>');
+            });
+        });*/
+    });
+    function a()
+    {
+        $("#contacts").append('<li>' + Me + '</li>');
+    }
+</script>
+<div id="body">     <ul id="contacts"></ul> </div>     
